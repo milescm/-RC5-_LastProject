@@ -42,11 +42,18 @@ export default class WeatherDetailScreen extends React.Component {
     }
 
     let celsius = this.state.main.temp - 273.15;
+    let humidity = this.state.main.humidity;
 
 
     return (
       <View style={styles.container}>
+        <Text> 실전코딩 5조 </Text>
         <Text>온도: {celsius.toFixed(1)}</Text>
+        <Text>습도: {humidity+""}</Text>
+
+
+
+
 
 
       </View>
@@ -60,4 +67,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     marginTop: Constants.statusBarHeight,
   },
+  fontcss: {
+    fontSize : 30,
+    borderColor : 'black',
+  },
+  imgcss:{
+    width: 200,
+    height : 150,
+  }
 });
